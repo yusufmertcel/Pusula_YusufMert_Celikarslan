@@ -1,6 +1,6 @@
 # Pusula Data Science Case Study
 
-## Yusuf Mert Çelikarslan - yusufmercelikarslan@gmail.com
+## Yusuf Mert Çelikarslan - yusufmertcelikarslan@gmail.com
 
 This project includes analysis and preprocessing steps of side_effect_data.xlsx
 
