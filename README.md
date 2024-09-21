@@ -31,7 +31,7 @@ Jupyter notebook divided into three main sections:
 </ol>
 </p>
 
-<p>Model evaluation step did only to extract feature importances of each feature. Preprocessed dataset saved into the dataset folder as an csv file for future use.
+<p>The model evaluation step was performed only to extract the feature importance of each feature. The pre-processed dataset was saved as a csv file in the dataset folder for future use.
 </p>
 
 ### Project Configuration
