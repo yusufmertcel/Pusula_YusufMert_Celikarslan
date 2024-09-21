@@ -1,6 +1,6 @@
 import pandas as pd
 
-def outlier_detect(df):
+def outlier_detect(df: pd.DataFrame) -> None:
     Q1 = df.quantile(0.25)
     Q3 = df.quantile(0.75)
     IQR = Q3 - Q1

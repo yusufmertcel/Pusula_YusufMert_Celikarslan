@@ -1,8 +1,9 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+from typing import Sequence
 
-def plot_cluster_comp(clusters, col_name):
+def plot_cluster_comp(clusters: Sequence, col_name: str) -> None:
     cluster_norms = list()
     for idx, cluster in enumerate(clusters):
         cluster_norm = (cluster[col_name].value_counts().sort_index() / cluster[col_name].value_counts().sum()) * 100
@@ -21,7 +22,7 @@ def plot_cluster_comp(clusters, col_name):
     
 
 
-def plot_count_of_columns(df, col_name):
+def plot_count_of_columns(df: pd.DataFrame, col_name: str) -> None:
     group_df = df.groupby(col_name).count()["origin"]
     group_df_perc = np.round(group_df / group_df.sum() * 100, 2)
     print(f"Number of classes:\n{group_df}")
@@ -31,11 +32,11 @@ def plot_count_of_columns(df, col_name):
     plt.ylabel("Percentage")
     plt.show()
 
-def plot_IQR(df, col_name):
+def plot_IQR(df: pd.DataFrame, col_name: str) -> None:
     df.plot.box(column=col_name, by="gender", figsize=(10,8))
     plt.show()
 
-def plot_categories_spread(df, col_name):
+def plot_categories_spread(df: pd.DataFrame, col_name: str) -> None:
     df[col_name].value_counts().plot(kind="bar", figsize=(14,8))
     plt.title(col_name)
     plt.show()
